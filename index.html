@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Assignment-6</title>
+</head>
+<body>
+
+    <div id="body" class="hidden">
+    <header class="mt-5">
+        <nav class="w-11/12 mx-auto ">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a>Home</a></li>
+                      <li><a>Shop</a></li>
+                      <li><a>Contact</a></li>
+                    </ul>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <img src="images/logo.webp" alt="">
+                    <a class=" text-3xl font-bold">Peddy</a>
+                  </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>Contact</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <img src="images/Frame 4.png" alt="">
+                </div>
+              </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="start" class="mt-10 w-11/12 mx-auto">
+
+         <div class="flex flex-col justify-center text-center items-center gap-6">
+            <h4 class="text-lg text-[#131313b0] font-bold">Bringing Families Together ❤️‍🔥 </h4>
+            <h1 class="text-5xl font-bold text-black">Your Path to Adoption <br> Starts Here</h1>
+            <p>Adopting an animal from our shelter not only gives a loving home to a deserving pet, but it <br> also saves a life. Be the hero who makes a difference – adopt, don’t shop!</p>
+            <button class="bg-[#0E7A81] px-6 py-3 text-white rounded-xl">View More</button>
+            <img src="images/pet.webp" alt="">
+         </div>
+
+        </section>
+          <hr class=" border-red-500 border  font-bold w-5 mx-auto">
+        <section id="second" class="w-11/12 mx-auto mt-10 mb-10 ">
+
+            <div class="flex flex-col gap-6 justify-center text-center">
+               <h2 class="text-4xl font-bold text-black">Adopt  Your  Best Friend</h2>
+               <p>Adopting an animal from our shelter not only gives a loving home to a deserving pet, but it <br> also saves a life. Be the hero who makes a difference – adopt, don’t shop!</p>
+            </div>
+
+            <div id="pet-btn" class="mt-10 flex justify-between gap-2">
+
+            </div>
+
+            <div class="flex justify-between mt-10 gap-3">
+                <h3 class="text-xl md:text-2xl font-bold text-black">Best Deal For you</h3>
+                <button onclick="sortingObject()" class="bg-[#0E7A81] text-sm md:text-base px-4 py-2 md:px-10 md:py-4 rounded-lg text-white">Sort by Price</button>
+            </div>
+
+        </section>
+
+        <section id="third" class="w-11/12 mx-auto flex gap-4">
+           <div id="main-fetch" class="w-8/12  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 relative">
+            
+            
+
+            <div id="loader hidden" class="hidden">
+               
+            </div>
+           </div>
+        <div id="liked-pet-main" class="w-4/12 border p-2 border-slate-300 rounded-xl">
+           <div id="liked-pet"  class=" w-full  grid grid-cols-1 md:grid-cols-2 gap-2">
+
+           
+
+           </div>
+        </div>
+
+        </section>
+
+
+        <section id="modal">
+            <button class="btn hidden" onclick="my_modal_5.showModal()">open modal</button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                <div id="modal-one">
+
+                </div>
+                <div class="w-full">
+                  <form method="dialog">
+                    <button class="btn w-full">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+        </section>
+        
+
+        <section id="second-modal">
+            
+          <button class="btn hidden " onclick="my_modal_1.showModal()">open modal</button>
+          <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <div class="flex flex-col justify-center items-center gap-2">
+                    <img src="images/Animation - 1735410412357.gif" alt="">
+                    <h3 class="text-3xl font-bold text-black">Congrats</h3>
+                    <p>Adoption process has started for your pet</p>
+                </div>
+                <div>
+                    <p id="countdown" class="text-5xl font-bold text-center mb-10">3</p>
+                </div>
+              <div class="modal-action">
+              
+              </div>
+            </div>
+          </dialog>
+        </section>
+
+        
+    </main>
+
+
+
+
+       
+
+<footer class="bg-black mt-10 ">
+ <div class="flex md:flex-row flex-col md:text-left text-center justify-center md:gap-0 gap-8  md:justify-between w-11/12 mx-auto py-10">
+    <div class="flex flex-col md:items-start justify-center items-center gap-3 text-white">
+        <div class="flex items-center gap-2">
+            <img src="images/logo.webp" alt="">
+            <a class=" text-3xl font-bold">Peddy</a>
+        </div>
+      <p class="text-sm">Location: av. Washington 165, NY CA </p>
+      <p class="text-sm">54003</p>
+      <p class="text-sm">Phone: +31 85 964 47 25</p>
+      <p class="text-sm">Email: info@yourdomain.com</p>
+      <p class="text-sm">Openings hours: 9.00 AM - 5.00 PM</p>
+      <div class="flex gap-6">
+        <img src="images/Group 2.png" alt="">
+        <img src="images/Vector (2).png" alt="">
+        <img src="images/Group 6.png" alt="">
+        <img src="images/Group 7.png" alt="">
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <h5 class="text-white text-lg font-bold">Useful Links</h5>
+      <p class="text-sm text-slate-200">Home</p>
+      <p class="text-sm text-slate-200">About Us</p>
+      <p class="text-sm text-slate-200">Animals</p>
+      <p class="text-sm text-slate-200">Foundation</p>
+      <p class="text-sm text-slate-200">Contact</p>
+    </div>
+
+    <div class="flex flex-col gap-4">
+       <h4 class="text-white text-lg font-bold ">Drop a Message</h4>
+       <input class="px-3 py-2 rounded-xl bg-[#ffffff1a] text-white" type="email" name="" id="" placeholder="Enter your email">
+       <button class="btn bg-[#0E7A81] text-white px-4">Subscribe</button>
+    </div>
+</div>
+</footer>
+</div>
+
+<span id="loader" class="loading z-[9999] loading-bars loading-lg fixed top-[50%] left-[50%]  flex justify-center items-center opacity-[0.75s]"></span>
+
+
+
+    <script src="scripts/fetch.js"></script>
+</body>
+</html>
