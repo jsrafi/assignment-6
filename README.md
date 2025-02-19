@@ -3,6 +3,9 @@
 
 Assignment-6: Peddy the pet adoption center.
 
+# live link of my project 
+-  ## [Animaliya](http://main-assignment-06.surge.sh/)
+
 ## Project Description
 Welcome to my project "peddy". Here you can see the pets if you like one you can like them , also can see a perticular pets description now if you are willing to adopt you can adopt the pet. the project has done by: 
 - Html
@@ -49,5 +52,4 @@ Welcome to my project "peddy". Here you can see the pets if you like one you can
 - Default parameters
 - Let & const
 
-# live link of my project 
--  ## [Assignment-6](http://main-assignment-06.surge.sh/)
+
